@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Web App | javascript</title>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-content">
+        <div class="cookie-title" data-i18n="cookieTitle">Cookie Notice</div>
+        <div class="cookie-message" data-i18n="cookieMessage">
+          This app uses cookies to store your budget data locally. By using this app, you agree to our privacy policy.
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn accept-btn" type="button" data-i18n="acceptCookies">Accept</button>
+          <button class="cookie-btn policy-btn" type="button" data-i18n="viewPolicy">View Policy</button>
+        </div>
+      </div>
+    </div>
+    <div class="privacy-modal" id="privacyModal">
+      <div class="privacy-content">
+        <div class="privacy-header">
+          <div class="privacy-title" data-i18n="privacyPolicy">Privacy Policy</div>
+          <button class="close-modal" type="button" id="closeModal">&times;</button>
+        </div>
+        <div class="privacy-body">
+          <h3 data-i18n="dataCollection">Data Collection</h3>
+          <p data-i18n="dataCollectionText">This app only collects and stores your budget data locally on your device using localStorage. We do not transmit any data to external servers.</p>
+          <h3 data-i18n="dataUsage">Data Usage</h3>
+          <p data-i18n="dataUsageText">Your budget data is used solely for the purpose of displaying your income, expenses, and balance within this application.</p>
+          <h3 data-i18n="dataStorage">Data Storage</h3>
+          <p data-i18n="dataStorageText">Your data is stored locally in your browser's localStorage. You can clear this data at any time by clearing your browser data.</p>
+          <h3 data-i18n="cookies">Cookies</h3>
+          <p data-i18n="cookiesText">This app uses cookies to remember your language preference and cookie consent.</p>
+        </div>
+      </div>
+    </div>
+    <div class="budget-container">
+      <div class="app-title">
+        <a href="">Budget<b>App</b></a>
+        <div class="language-switch" aria-label="Language switch">
+          <button class="lang-btn active" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="zh" type="button">中文</button>
+        </div>
+      </div>
+      <div class="budget-header">
+        <div class="balance">
+          <div class="title" data-i18n="balance">Balance</div>
+          <div class="value"><small>$</small>0</div>
+        </div>
+        <div class="account">
+          <div class="income">
+            <div class="title" data-i18n="income">Income</div>
+            <div class="income-total"><small>$</small>0</div>
+          </div>
+          <div class="chart"></div>
+          <div class="outcome">
+            <div class="title" data-i18n="outcome">Outcome</div>
+            <div class="outcome-total"><small>$</small>0</div>
+          </div>
+        </div>
+      </div>
+      <div class="budget-dashboard">
+        <div class="dash-title" data-i18n="dashboard">Dashboard</div>
+        <div class="toggle">
+          <div class="first-tab" data-i18n="expenses">Expenses</div>
+          <div class="second-tab" data-i18n="income">Income</div>
+          <div class="third-tab focus" data-i18n="all">All</div>
+        </div>
+        <div class="hide" id="expense">
+          <ul class="list"></ul>
+          <div class="input">
+            <input
+              type="text"
+              id="expense-title-input"
+              name="title"
+              data-i18n-placeholder="titlePlaceholder"
+              data-i18n-aria-label="expenseTitleLabel"
+              placeholder="title"
+              aria-label="Expense title"
+            />
+            <input
+              type="number"
+              id="expense-amount-input"
+              name="amount"
+              data-i18n-placeholder="amountPlaceholder"
+              data-i18n-aria-label="expenseAmountLabel"
+              placeholder="$0"
+              min="0.01"
+              step="0.01"
+              aria-label="Expense amount"
+            />
+            <button
+              class="add-expense"
+              type="button"
+              data-i18n-aria-label="addExpense"
+              aria-label="Add expense"
+            >
+              <img src="icon/plus.png" alt="+" />
+            </button>
+          </div>
+        </div>
+        <div class="hide" id="income">
+          <ul class="list"></ul>
+          <div class="input">
+            <input
+              type="text"
+              id="income-title-input"
+              name="title"
+              data-i18n-placeholder="titlePlaceholder"
+              data-i18n-aria-label="incomeTitleLabel"
+              placeholder="title"
+              aria-label="Income title"
+            />
+            <input
+              type="number"
+              id="income-amount-input"
+              name="amount"
+              data-i18n-placeholder="amountPlaceholder"
+              data-i18n-aria-label="incomeAmountLabel"
+              placeholder="$0"
+              min="0.01"
+              step="0.01"
+              aria-label="Income amount"
+            />
+            <button
+              class="add-income"
+              type="button"
+              data-i18n-aria-label="addIncome"
+              aria-label="Add income"
+            >
+              <img src="icon/plus.png" alt="+" />
+            </button>
+          </div>
+        </div>
+        <div id="all">
+          <ul class="list"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="./chart.js"></script>
+    <script src="./budget.js"></script>
+    <script src="./budget-dom.js"></script>
+  </body>
+</html>

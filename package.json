@@ -1,0 +1,37 @@
+{
+  "name": "budget-app",
+  "version": "1.0.0",
+  "description": "Budget management application with accessibility, i18n, and privacy compliance",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8080",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "keywords": ["budget", "finance"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "budget.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageThreshold": {
+      "./": {
+        "statements": 80,
+        "branches": 80,
+        "functions": 80,
+        "lines": 80
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "document\\.addEventListener"
+    ]
+  }
+}
