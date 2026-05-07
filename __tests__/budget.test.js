@@ -1,3 +1,9 @@
+/**
+ * Budget App Test Suite
+ * Tests all core functionality of the budget application
+ * @author Team Member 1
+ */
+
 const budgetApp = require('../budget.js');
 
 describe('Budget App - Core Functions', () => {
