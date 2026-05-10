@@ -273,7 +273,7 @@ input[type="number"] {
   color: rgba(255, 255, 255, 0.7);
 }
 .budget-header .account .outcome .outcome-total {
-  color: #f0624d;
+  color: #e55a4a;
   font-family: "Gilroy Bold";
 }
 
@@ -388,7 +388,7 @@ input[type="number"] {
 .budget-dashboard #all ul.list li.income {
 }
 .budget-dashboard #all ul.list li.expense {
-  color: #f0624d;
+  color: #c44536;
 }
 
 /* //////// EXPENSE ////////// */
@@ -476,7 +476,7 @@ input[type="number"] {
   margin-bottom: 10px;
   word-wrap: break-word;
   font-family: "Gilroy Bold";
-  color: #f0624d;
+  color: #c44536;
 }
 
 .budget-dashboard #expense ul.list li #edit {
