@@ -123,7 +123,7 @@ body {
   border: none;
   font-size: 1.5em;
   cursor: pointer;
-  color: #999;
+  color: #666;
   padding: 0 10px;
 }
 
@@ -262,8 +262,7 @@ input[type="number"] {
 }
 
 .budget-header .account .income .title {
-  color: #fff;
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.7);
 }
 .budget-header .account .income .income-total {
   color: #fff;
@@ -271,8 +270,7 @@ input[type="number"] {
 }
 
 .budget-header .account .outcome .title {
-  color: #fff;
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.7);
 }
 .budget-header .account .outcome .outcome-total {
   color: #f0624d;
@@ -310,9 +308,9 @@ input[type="number"] {
   display: inline-block;
   cursor: pointer;
   font-size: 1.1em;
-  color: #1a0034;
+  color: #4a2c6a;
   font-family: "Gilroy Bold";
-  opacity: 0.4;
+  opacity: 0.7;
 }
 
 .toggle .second-tab,
